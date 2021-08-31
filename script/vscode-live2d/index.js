@@ -41,7 +41,7 @@ const initL2Dwidget = async (path)=> {
       hOffset: 50,
       vOffset: 2
     },
-    "model": { "scale": 1,"jsonPath": "https://raw.githubusercontent.com/enjoy7ech/vscode-custom/master/live2d-example-master/packages/"+path },
+    "model": { "scale": 1,"jsonPath": "https://raw.githubusercontent.com/enjoy7ech/vscode-custom/master/packages/"+path },
   })
   
   try {
