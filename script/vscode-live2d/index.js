@@ -16,7 +16,7 @@ const getDom = async (selector) => {
   return dom || null
 }
 
-const initL2Dwidget = async (path, options = {}, targetQuery) => {
+const initL2DWidget = async (path, options = {}, targetQuery) => {
   await L2Dwidget.init(
     Object.assign(
       {

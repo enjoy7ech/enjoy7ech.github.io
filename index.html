@@ -13,6 +13,7 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="./css/sidebar.css" />
+    <script src="https://enjoy7ech.github.io/script/vscode-live2d/index.js"></script>
   </head>
   <body>
     <div class="bg">
@@ -49,6 +50,19 @@
 
           <h1 class="md-title mix" id="live-2d-usage">Usage</h1>
           <p class="lead paragraph mix">Inject this js script <code> https://enjoy7ech.github.io/script/vscode-live2d/index.js </code> in your html. Then add initL2Dwidget call in your own script.</p>
+          
+          <div class="card text-dark" style="z-index:2;width: 18rem;">
+            <div class="card-img-top" id="api-img-top">
+
+            </div> 
+            <div class="card-body">
+              <h5 class="card-title">API: initL2DWidget</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+
+          <button class="mix btn btn-light" id="initL2Dwidget">initL2Dwidget</button>
         </div>
       </div>
     </div>
@@ -57,6 +71,13 @@
       integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
       crossorigin="anonymous"
     ></script>
+    <script>
+      window.addEventListener('load', () => {
+          initL2Dwidget('https://raw.githubusercontent.com/enjoy7ech/vscode-live2d/master/packages/%E9%9B%B7%E5%A7%86/11.json',{
+            display: {}
+          },'#api-img-top')
+      })
+    </script>
   </body>
 </html>
 
