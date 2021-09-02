@@ -1,12 +1,143 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>enjoy7ech CDN</title>
-</head>
-<body>
-    <img src="./img/giphy.gif" width="300" />
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Enjoy7ech API POWER</title>
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./css/sidebar.css" />
+  </head>
+  <body>
+    <div class="bg">
+      <video class="back" autoplay loop>
+        <source src="./media/bg.webm" />
+      </video>
+    </div>
+    <div class="container">
+      <div class="header mix">
+        <div class="text-dark fw-bold" style="margin-left: 1em">Enjoy7ech API</div>
+      </div>
+      <div class="content">
+        <div class="sidebar mix">
+          <ul class="list-unstyled ps-0">
+            <li class="mb-1">
+              <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#live2d-api-collapse" aria-expanded="true">live2d-api</button>
+              <div class="collapse show" id="live2d-api-collapse">
+                <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                  <li><a href="#live-2d-overview" class="link-light rounded">Overview</a></li>
+                  <li><a href="#live-2d-usage" class="link-light rounded">Usage</a></li>
+                  <li><a href="#" class="link-light rounded">Playground</a></li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="md">
+          <h1 class="md-title mix" id="live-2d-overview">Overview</h1>
+          <p class="lead paragraph mix">
+            Live2D is a software technology that allows you to create dynamic expressions that breathe life into an original 2D illustration. Inject live2d in any browser.You need a model in anywhere
+            online.For example,
+            <a href="https://raw.githubusercontent.com/enjoy7ech/vscode-live2d/master/packages/%E9%9B%B7%E5%A7%86/11.json" target="blank"> remu.json </a>
+          </p>
+
+          <h1 class="md-title mix" id="live-2d-usage">Usage</h1>
+          <p class="lead paragraph mix">Inject this js script <code> https://enjoy7ech.github.io/script/vscode-live2d/index.js </code> in your html. Then add initL2Dwidget call in your own script.</p>
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>
+
+<style>
+  body {
+    overflow: auto;
+    color: #fff;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    width: 1320px;
+    margin: auto;
+  }
+
+  .container::before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    mix-blend-mode: difference;
+    pointer-events: none;
+  }
+  .mix {
+    mix-blend-mode: difference;
+  }
+
+  .bg {
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+  }
+
+  .bg > .back {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    mix-blend-mode: screen;
+  }
+
+  .header {
+    background: #fff;
+    height: 56px;
+    font-size: 1.3em;
+    display: flex;
+    align-items: center;
+  }
+
+  .content {
+    display: flex;
+  }
+
+  .sidebar {
+    padding-top: 2em;
+    width: 220px;
+    padding: 0 1em;
+    position: sticky;
+    top: 0;
+    background: #401a11;
+  }
+
+  .md {
+    margin-left: 8px;
+    padding: 1.5em;
+    flex: 1;
+    min-height: 100vh;
+  }
+
+  .md-title {
+  }
+
+  .paragraph {
+    text-indent: 2em;
+    text-align: justify;
+  }
+
+  .paragraph::first-letter {
+    font-size: 2em;
+  }
+</style>
