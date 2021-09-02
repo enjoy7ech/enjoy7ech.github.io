@@ -13,7 +13,9 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="./css/sidebar.css" />
-    <script src="https://enjoy7ech.github.io/script/vscode-live2d/index.js"></script>
+    <script src="./script/vscode-live2d/index.js"></script>
+
+    <!-- <script src="https://enjoy7ech.github.io/script/vscode-live2d/index.js"></script> -->
   </head>
   <body>
     <div class="bg">
@@ -50,19 +52,86 @@
 
           <h1 class="md-title mix" id="live-2d-usage">Usage</h1>
           <p class="lead paragraph mix">Inject this js script <code> https://enjoy7ech.github.io/script/vscode-live2d/index.js </code> in your html. Then add initL2Dwidget call in your own script.</p>
-          
-          <div class="card text-dark" style="z-index:2;width: 18rem;">
-            <div class="card-img-top" id="api-img-top">
 
-            </div> 
+          <div class="card text-dark" style="z-index: 2; width: 100%">
+            <div class="card-img-top" id="api-img-top"></div>
             <div class="card-body">
-              <h5 class="card-title">API: initL2DWidget</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <a href="#" class="btn btn-primary">Go somewhere</a>
+              <h5 class="card-title">API: initL2DWidget(path, options, widgetStyle, targetQuery)</h5>
+              <div class="accordion" id="accordionInitL2DWidget">
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="accordionInitL2DWidget-1">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseInitL2DWidget-1" aria-expanded="true" aria-controls="collapseInitL2DWidget-1">
+                      path
+                    </button>
+                  </h2>
+                  <div id="collapseInitL2DWidget-1" class="accordion-collapse collapse show" aria-labelledby="accordionInitL2DWidget-1" data-bs-parent="#accordionInitL2DWidget">
+                    <div class="accordion-body">
+                      <strong>Path is the path of modelJson.</strong>Such as
+                      <a href="https://raw.githubusercontent.com/enjoy7ech/vscode-live2d/master/packages/%E9%9B%B7%E5%A7%86/11.json" target="blank"> remu.json </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="accordionInitL2DWidget-2">
+                    <button
+                      class="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#collapseInitL2DWidget-2"
+                      aria-expanded="false"
+                      aria-controls="collapseInitL2DWidget-2"
+                    >
+                      options
+                    </button>
+                  </h2>
+                  <div id="collapseInitL2DWidget-2" class="accordion-collapse collapse" aria-labelledby="accordionInitL2DWidget-2" data-bs-parent="#accordionInitL2DWidget">
+                    <div class="accordion-body">
+                      <strong>This is the option merged to the init function.</strong> Docs can be checked on
+                      <a href="https://l2dwidget.js.org/docs/class/src/index.js~L2Dwidget.html#instance-method-init">
+                        https://l2dwidget.js.org/docs/class/src/index.js~L2Dwidget.html#instance-method-init
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="accordionInitL2DWidget-3">
+                    <button
+                      class="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#collapseInitL2DWidget-3"
+                      aria-expanded="false"
+                      aria-controls="collapseInitL2DWidget-3"
+                    >
+                      widgetStyle
+                    </button>
+                  </h2>
+                  <div id="collapseInitL2DWidget-3" class="accordion-collapse collapse" aria-labelledby="accordionInitL2DWidget-3" data-bs-parent="#accordionInitL2DWidget">
+                    <div class="accordion-body">
+                      <strong>The widget css style, set to HTMLElement.style.</strong>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="accordionInitL2DWidget-4">
+                    <button
+                      class="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#collapseInitL2DWidget-4"
+                      aria-expanded="false"
+                      aria-controls="collapseInitL2DWidget-4"
+                    >
+                      targetQuery
+                    </button>
+                  </h2>
+                  <div id="collapseInitL2DWidget-4" class="accordion-collapse collapse" aria-labelledby="accordionInitL2DWidget-4" data-bs-parent="#accordionInitL2DWidget">
+                    <div class="accordion-body"><strong>The place widget will append.</strong>Normally to body.</div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
-
-          <button class="mix btn btn-light" id="initL2Dwidget">initL2Dwidget</button>
         </div>
       </div>
     </div>
@@ -72,9 +141,9 @@
       crossorigin="anonymous"
     ></script>
     <script>
-      // window.addEventListener('load', () => {
-      //     initL2Dwidget('https://raw.githubusercontent.com/enjoy7ech/vscode-live2d/master/packages/%E9%9B%B7%E5%A7%86/11.json',{},{},'#api-img-top')
-      // })
+      window.addEventListener('load', () => {
+        initL2DWidget('https://raw.githubusercontent.com/enjoy7ech/vscode-live2d/master/packages/%E9%9B%B7%E5%A7%86/11.json', {}, {}, '#api-img-top')
+      })
     </script>
   </body>
 </html>
