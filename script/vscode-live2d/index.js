@@ -9,6 +9,9 @@ const sleep = (milliseconds) => {
 }
 
 const getDom = async (selector) => {
+  if(selector instanceof HTMLElement){
+    return selector
+  }
   let dom = document.querySelector(selector)
   let n = 10
   while (!dom && n--) {
@@ -18,22 +21,25 @@ const getDom = async (selector) => {
   return dom || null
 }
 
-const initL2DWidget = async (path, options = {}, widgetStyle = {}, targetQuery) => {
+const initL2DWidget = async (options = {}, widgetStyle = {},canvaStyle = {}, targetQuery) => {
   const widgetId = 'live2d-widget' + _widgetId
+  if(!(options.model && options.model.jsonPath)){
+    console.error('model.jsonPath not found')
+    return
+  }
   L2Dwidget.init(
     Object.assign(
       {
-        dialog: {
-          enable: true,
-          script: {
-            'tap body': 'Coding!!!',
-            'tap face': '你在认真写代码吗？',
-          },
-        },
+        // dialog: {
+        //   enable: true,
+        //   script: {
+        //     'tap body': 'Coding!!!',
+        //     'tap face': '你在认真写代码吗？',
+        //   },
+        // },
         name: {
           div: widgetId,
         },
-        model: { scale: 1, jsonPath: path },
       },
       options
     )
@@ -60,9 +66,14 @@ const initL2DWidget = async (path, options = {}, widgetStyle = {}, targetQuery) 
 
       const canvas = widget.querySelector('#live2dcanvas')
       if (canvas) {
-        canvas.style.position = null
-        canvas.style.left = null
-        canvas.style.top = null
+        canvas.removeAttribute('style')
+      }
+
+      if (canvas && canvaStyle instanceof Object) {
+        const keys = Object.keys(canvaStyle)
+        for(const k of keys){
+          canvas.style[k] = canvaStyle[k]
+        }
       }
 
       if (target) {
