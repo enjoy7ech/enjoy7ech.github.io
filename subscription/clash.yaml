@@ -197,14 +197,14 @@ proxies:
     type: vmess
     server: dzx-tunnel.quest
     port: 443
-    uuid: be21e490-a7ee-4447-8e8d-8a3093955de3
+    uuid: eb5b3aaf-4205-4fd2-a27c-607fb65cb6c9
     alterId: 0
     cipher: auto
     tls: true
     network: ws
     skip-cert-verify: true
     ws-opts:
-      path: /epic
+      path: /3c5c830c6c8/
       headers:
         Host: dzx-tunnel.quest
 
