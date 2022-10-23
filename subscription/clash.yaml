@@ -196,17 +196,15 @@ proxies:
   - name: Proxy
     type: vmess
     server: dzx-tunnel.quest
-    port: 443
-    uuid: eb5b3aaf-4205-4fd2-a27c-607fb65cb6c9
+    port: 444
+    uuid: 7a395c98-399e-4a66-8da1-df426a8c3ea1
     alterId: 0
     cipher: auto
     tls: true
-    network: ws
+    network: h2
     skip-cert-verify: true
-    ws-opts:
-      path: /3c5c830c6c8/
-      headers:
-        Host: dzx-tunnel.quest
+    h2-opts:
+      path: /e7c48cf2/
 
 rules:
   # 自定义规则
