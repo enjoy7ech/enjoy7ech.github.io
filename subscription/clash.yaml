@@ -384,7 +384,6 @@ rules:
   - DOMAIN-KEYWORD,youtube,Proxy
   - DOMAIN-KEYWORD,facebook,Proxy
   - DOMAIN-SUFFIX,fb.me,Proxy
-  - DOMAIN-SUFFIX,abema.tv,Proxy
   - DOMAIN-SUFFIX,fbcdn.net,Proxy
   - DOMAIN-KEYWORD,twitter,Proxy
   - DOMAIN-KEYWORD,instagram,Proxy
@@ -692,6 +691,7 @@ rules:
   - DOMAIN-SUFFIX,ying.com,Proxy
   - DOMAIN-SUFFIX,yoyo.org,Proxy
   - DOMAIN-SUFFIX,ytimg.com,Proxy
+  - DOMAIN-SUFFIX,abema.tv,Proxy
 
   # Telegram
   - DOMAIN-SUFFIX,telegra.ph,Proxy
