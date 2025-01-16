@@ -384,6 +384,7 @@ rules:
   - DOMAIN-KEYWORD,youtube,Proxy
   - DOMAIN-KEYWORD,facebook,Proxy
   - DOMAIN-SUFFIX,fb.me,Proxy
+  - DOMAIN-SUFFIX,abema.tv,Proxy
   - DOMAIN-SUFFIX,fbcdn.net,Proxy
   - DOMAIN-KEYWORD,twitter,Proxy
   - DOMAIN-KEYWORD,instagram,Proxy
